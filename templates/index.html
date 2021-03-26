@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta name='DESCRIPTION' content="">
+        <meta name='KEYWORDS' content="">
+        <title>Messageboard</title>
+    </head>
+    <style> 
+    body {
+background-color:#97a56f;
+padding: 20px 20px 20px 20px;
+}
+h1,h2,h3,h4,p {
+    color:white;
+    font-family: arial;
+
+}
+hr {
+    border: 1px solid white;
+}
+    </style>
+    <body>
+        <h1>Messageboard</h1>
+        <p>This is a messageboard made with Python Flask. </p>
+        <h3>Send Message</h3>
+        <form method="POST" enctype=multipart/form-data>
+            <p>Name: <input name='name' maxlength='20' placeholder='Anon'> | Subject: <input name='subject' maxlength='20' placeholder='Subject'></p>
+            <p>Message:
+            <textarea name='msg' rows='3' cols='50' maxlength='250' placeholder='Mesage'></textarea><br></p>
+            <input type='Submit'>
+        </form>
+        <h3>Messages</h3>
+        <hr>
+        {% for message in messages %}
+            <p><b>{{message[0]}}</b>: <i>{{message[1]}}</i></p>
+            <p>{{message[2]}}</p>
+            <hr>
+        {% endfor %}
+    </body>
+</html>    
