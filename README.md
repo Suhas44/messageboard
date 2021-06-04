@@ -1,4 +1,4 @@
 # messageboard 
 
-A messageboard I programmed with @Juicestus
+A messageboard I programmed 
 
